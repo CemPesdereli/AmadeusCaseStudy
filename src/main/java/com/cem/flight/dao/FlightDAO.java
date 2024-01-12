@@ -1,6 +1,6 @@
 package com.cem.flight.dao;
 
-import com.cem.flight.entity.Airport;
+
 import com.cem.flight.entity.Flight;
 
 import java.util.List;

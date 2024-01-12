@@ -1,11 +1,11 @@
-package com.cem.flight.dao;
+package com.cem.flight.service;
 
 import com.cem.flight.entity.Airport;
 import com.cem.flight.entity.Flight;
 
 import java.util.List;
 
-public interface FlightDAO {
+public interface FlightService {
 
     List<Flight> findAll();
 
@@ -14,4 +14,6 @@ public interface FlightDAO {
     void save(Flight theFlight);
 
     void deleteById(int theId);
+
+
 }

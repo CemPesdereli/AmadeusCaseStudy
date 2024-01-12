@@ -32,8 +32,8 @@ public class FlightDAOImpl implements FlightDAO{
     }
 
     @Override
-    public void save(Airport theAirport) {
-        entityManager.merge(theAirport);
+    public void save(Flight theFlight) {
+        entityManager.merge(theFlight);
     }
 
     @Override

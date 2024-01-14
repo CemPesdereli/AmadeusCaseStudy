@@ -11,12 +11,12 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class getDailyFlightInfo {
+public class DailyFlightInfo {
 
     private MockThirdPartyApi mockThirdPartyApi;
     private FlightService flightService;
 
-    public getDailyFlightInfo(MockThirdPartyApi theMockThirdPartyApi, FlightService theFlightService){
+    public DailyFlightInfo(MockThirdPartyApi theMockThirdPartyApi, FlightService theFlightService){
         this.mockThirdPartyApi=theMockThirdPartyApi;
         this.flightService=theFlightService;
     }

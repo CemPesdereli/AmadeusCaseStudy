@@ -4,7 +4,7 @@
       "id": 11
     },
     "arrivalAirport": {
-      "id": 12
+      "id": 16
     },
     "departureDateTime": "2024-01-14T11:44:05.509Z",
     "returnDateTime": "2024-01-14T11:44:05.509Z",
@@ -15,7 +15,7 @@
       "id": 13
     },
     "arrivalAirport": {
-      "id": 14
+      "id": 16
     },
     "departureDateTime": "2024-01-14T12:30:00.000Z",
     "returnDateTime": "2024-01-14T14:30:00.000Z",
@@ -23,7 +23,7 @@
   },
   {
     "departureAirport": {
-      "id": 15
+      "id": 20
     },
     "arrivalAirport": {
       "id": 16

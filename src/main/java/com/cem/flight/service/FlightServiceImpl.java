@@ -1,7 +1,6 @@
 package com.cem.flight.service;
 
 import com.cem.flight.dao.FlightDAO;
-import com.cem.flight.entity.Airport;
 import com.cem.flight.entity.Flight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

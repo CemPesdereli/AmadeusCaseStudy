@@ -2,7 +2,6 @@ package com.cem.flight.controller;
 
 import com.cem.flight.entity.Airport;
 import com.cem.flight.service.AirportService;
-import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

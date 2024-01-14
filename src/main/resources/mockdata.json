@@ -1,0 +1,57 @@
+[
+  {
+    "departureAirport": {
+      "id": 11
+    },
+    "arrivalAirport": {
+      "id": 12
+    },
+    "departureDateTime": "2024-01-14T11:44:05.509Z",
+    "returnDateTime": "2024-01-14T11:44:05.509Z",
+    "price": 100.50
+  },
+  {
+    "departureAirport": {
+      "id": 13
+    },
+    "arrivalAirport": {
+      "id": 14
+    },
+    "departureDateTime": "2024-01-14T12:30:00.000Z",
+    "returnDateTime": "2024-01-14T14:30:00.000Z",
+    "price": 150.75
+  },
+  {
+    "departureAirport": {
+      "id": 15
+    },
+    "arrivalAirport": {
+      "id": 16
+    },
+    "departureDateTime": "2024-01-14T15:15:00.000Z",
+    "returnDateTime": "2024-01-14T17:30:00.000Z",
+    "price": 120.25
+  },
+  {
+    "departureAirport": {
+      "id": 17
+    },
+    "arrivalAirport": {
+      "id": 18
+    },
+    "departureDateTime": "2024-01-14T18:00:00.000Z",
+    "returnDateTime": "2024-01-14T20:00:00.000Z",
+    "price": 180.00
+  },
+  {
+    "departureAirport": {
+      "id": 19
+    },
+    "arrivalAirport": {
+      "id": 20
+    },
+    "departureDateTime": "2024-01-14T21:00:00.000Z",
+    "returnDateTime": "2024-01-14T23:00:00.000Z",
+    "price": 200.50
+  }
+]

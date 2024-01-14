@@ -1,6 +1,7 @@
 package com.cem.flight.service;
 
 import com.cem.flight.dao.FlightDAO;
+import com.cem.flight.entity.Airport;
 import com.cem.flight.entity.Flight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,12 @@ public class FlightServiceImpl implements FlightService {
 
     @Override
     public Flight findById(int theId) {
-        return flightDAO.findById(theId);
+
+        Flight theFlight = flightDAO.findById(theId);
+        if(theFlight==null){
+            throw new RuntimeException("Flight id not found - "+theId);
+        }
+        return theFlight;
     }
 
     @Override
@@ -38,6 +44,11 @@ public class FlightServiceImpl implements FlightService {
     @Override
     @Transactional
     public void deleteById(int theId) {
+
+        Flight tempFlight =  flightDAO.findById(theId);
+        if(tempFlight==null){
+            throw new RuntimeException("Flight id not found - "+theId);
+        }
         flightDAO.deleteById(theId);
 
     }

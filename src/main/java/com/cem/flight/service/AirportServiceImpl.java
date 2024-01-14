@@ -26,7 +26,13 @@ public class AirportServiceImpl implements AirportService{
 
     @Override
     public Airport findById(int theId) {
-        return airportDAO.findById(theId);
+
+
+        Airport theAirport = airportDAO.findById(theId);
+        if(theAirport==null){
+            throw new RuntimeException("Airport id not found - "+theId);
+        }
+        return theAirport;
     }
 
     @Override
@@ -39,6 +45,11 @@ public class AirportServiceImpl implements AirportService{
     @Override
     @Transactional
     public void deleteById(int theId) {
+
+        Airport tempAirport =  airportDAO.findById(theId);
+        if(tempAirport==null){
+            throw new RuntimeException("Airport id not found - "+theId);
+        }
         airportDAO.deleteById(theId);
     }
 }

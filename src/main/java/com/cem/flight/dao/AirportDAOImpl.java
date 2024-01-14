@@ -51,7 +51,7 @@ public class AirportDAOImpl implements AirportDAO {
 
             for (Flight departureFlight : departureFlights) {
                 departureFlight.setDepartureAirport(null);
-                // bu airportun kendisiyle deneyecem sonra.
+
                 Airport departureAirport = departureFlight.getDepartureAirport();
                 Airport arrivalAirport = departureFlight.getArrivalAirport();
                 if (departureAirport != null) {

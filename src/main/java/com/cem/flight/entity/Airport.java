@@ -1,12 +1,15 @@
 package com.cem.flight.entity;
 
+import com.fasterxml.jackson.annotation.*;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Entity
 @Table(name="airport")
+
 public class Airport {
 
     @Id
@@ -15,12 +18,16 @@ public class Airport {
     private int id;
 
     @Column(name="city")
+    @Schema(example = "Istanbul")
     private String city;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "departureAirport",cascade = CascadeType.ALL, orphanRemoval = true)
+
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "departureAirport",cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Flight> departures;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "arrivalAirport", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "arrivalAirport", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Flight> arrivals;
 
 
@@ -30,8 +37,7 @@ public class Airport {
 
     public Airport(String city) {
         this.city = city;
-        //departures=new ArrayList<>();
-        //arrivals=new ArrayList<>();
+
     }
 
     public int getId() {
@@ -65,20 +71,8 @@ public class Airport {
     public void setArrivals(List<Flight> arrivals) {
         this.arrivals = arrivals;
     }
-    public void addDeparture(Flight tempFlight) {
-        if (departures == null) {
-            departures = new ArrayList<>();
-        }
-        departures.add(tempFlight);
-        tempFlight.setDepartureAirport(this);
-    }
-    public void addArrival(Flight tempFlight) {
-        if (arrivals == null) {
-            arrivals = new ArrayList<>();
-        }
-        arrivals.add(tempFlight);
-        tempFlight.setArrivalAirport(this);
-    }
+
+
 
     @Override
     public String toString() {

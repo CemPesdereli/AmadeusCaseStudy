@@ -1,6 +1,9 @@
 
 package com.cem.flight.entity;
 
+
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+
 import jakarta.persistence.*;
 
 import java.sql.Timestamp;
@@ -17,10 +20,12 @@ public class Flight {
 
     @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinColumn(name = "departure_airport_id")
+    @JsonIdentityReference(alwaysAsId = true)
     private Airport departureAirport;
 
     @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinColumn(name = "arrival_airport_id")
+    @JsonIdentityReference(alwaysAsId = true)
     private Airport arrivalAirport;
 
     @Column(name = "departure_date_time")

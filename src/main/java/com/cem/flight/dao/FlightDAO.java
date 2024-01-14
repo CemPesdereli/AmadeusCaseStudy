@@ -14,4 +14,6 @@ public interface FlightDAO {
     void save(Flight theFlight);
 
     void deleteById(int theId);
+
+    List<Flight> searchFlights(String departureCity, String destinationCity, String departureDate, String returnDate);
 }
